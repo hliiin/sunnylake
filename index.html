@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Lake - Webflow HTML website template</title>
+  <link rel="icon"
+    href="https://cdn.prod.website-files.com/66d2e98d2eda979c96732a41/66e5bc757f39a5ad36c16187_Sunny%20Lake%20-%20Webclip.png"
+    type="image/png">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- swiper -->
+  <style>
+    .pictures h1 {
+      font-size: 40px;
+      margin: 0 3% 40px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 80vh;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide {
+      width: 32%;
+      height: 60%;
+    }
+
+    .swiper-slide:nth-child(2n) {
+      width: 26%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img
+      src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe41_Sunny%20Lake%20(Black).svg"
+      alt="" height="40px">
+    <div class="nav-right">
+      <div class="nav-link">
+        <a href="https://sunnylake.webflow.io/what-to-do">What to do</a>
+        <a href="https://sunnylake.webflow.io/what-to-do">What to stay</a>
+        <a href="https://sunnylake.webflow.io/what-to-do">where to eat</a>
+        <a href="https://sunnylake.webflow.io/what-to-do">Visitor info</a>
+        <a href="https://sunnylake.webflow.io/what-to-do">Blog</a>
+      </div>
+      <img class="nav-icon"
+        src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdf8_Hamburger%20menu.svg"
+        alt="">
+    </div>
+  </nav>
+  <header style="display: none;">
+    <div class="header">
+      <ul>
+        <li>
+          <h1>What to do</h1>
+        </li>
+        <li>Sightseeing</li>
+        <li>Adventure & Outdoors</li>
+        <li>Wellness</li>
+      </ul>
+      <ul>
+        <li>
+          <h1>Where to stay</h1>
+        </li>
+        <li>Hotels</li>
+        <li>Campings</li>
+        <li>Cabins</li>
+      </ul>
+      <ul>
+        <li>
+          <h1>Where to eat</h1>
+        </li>
+        <li>Restaurants</li>
+        <li>Coffee shops</li>
+        <li>Bars</li>
+      </ul>
+      <ul>
+        <li>
+          <h1>Visitor info</h1>
+        </li>
+        <li>When to go</li>
+        <li>Getting here</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <div class="bgc-video">
+      <div class="bgc">
+        <div class="bgc-text">
+          <h1>Explore <br> Sunny Lake</h1>
+          <button class="btn">Explore</button>
+        </div>
+        <p>Experience the beauty of Sunny Lake National Park, where sparkling waters, lush forests, and scenic trails
+          await your next adventure.</p>
+      </div>
+      <video class="video-background" autoplay muted loop>
+        <source
+          src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe05_Sunny%20Lake%20(1)-transcode.webm"
+          data-wf-ignore="true">
+        你的浏览器不支持视频播放。
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+  </section>
+  <section class="park-section">
+    <div class="National-park">
+      <div class="park-content">
+        <h1>Sunny Lake <br> National Park</h1>
+        <p>Sunny Lake National Park is a hidden gem known for its sparkling blue waters, lush forests, and scenic
+          trails. Covering over 5,000 square miles, the park offers a peaceful escape into nature’s wonders, with
+          opportunities to hike, paddle, and explore diverse landscapes.</p>
+        <p>Whether you're unwinding on the lake beaches, hiking through wildflower meadows, or enjoying a picnic with
+          mountain views, Sunny Lake promises unforgettable experiences. Embrace the open trails, soak in the sun, and
+          let the beauty of Sunny Lake inspire your next adventure.</p>
+      </div>
+      <div class="park-img">
+        <img class="parkImg img-1"
+          src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe13_aan-kasman-2mEw5oMynz0-unsplash.webp"
+          alt="">
+        <img class="parkImg img-2"
+          src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe15_luca-bravo-ESkw2ayO2As-unsplash.webp"
+          alt="">
+        <img class="parkImg img-3"
+          src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe16_pietro-de-grandi-T7K4aEPoGGk-unsplash.webp"
+          alt="">
+      </div>
+    </div>
+  </section>
+  <section style="margin-top: 100px;">
+    <div class="plan-dream">
+      <h1>Plan your dream <br> adventure at Sunny Lake</h1>
+      <ul>
+        <li class="plan-li">
+          <div class="plan-content">
+            <h2>Sightseeing</h2>
+            <button>Explore</button>
+          </div>
+        </li>
+        <li class="plan-li">
+          <div class="plan-content">
+            <h2>Advebtrue & Outdoors</h2>
+            <button>Explore</button>
+          </div>
+
+        </li>
+        <li class="plan-li">
+          <div class="plan-content">
+            <h2>Wellness</h2>
+            <button>Explore</button>
+          </div>
+
+        </li>
+      </ul>
+
+    </div>
+  </section>
+  <section>
+    <div class="perfect-stay">
+      <div class="img"></div>
+      <a class="paragraph" href="https://sunnylake.webflow.io/where-to-stay" target="_blank">
+        <h1>Find your perfect stay</h1>
+        <p>Sunny Lake offers a range of accommodations, from charming cabins and family-friendly lodges to campgrounds
+          under the stars. Relax and unwind in the perfect spot that fits your style and budget.</p>
+        <button class="perfect-btn">Explore<img
+            src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdf5_arrow_right_alt_24dp_5F6368_FILL0_wght200_GRAD0_opsz24%202.svg"
+            loading="lazy" alt="Icon" class="arrow-right">
+        </button>
+      </a>
+    </div>
+  </section>
+  <section>
+    <div class="perfect-stay best">
+      <a class="paragraph" href="https://sunnylake.webflow.io/where-to-eat" target="_blank">
+        <h1>Taste the best of Sunny Lake</h1>
+        <p>Discover diverse dining options, from lakeside restaurants to cozy cafes nestled in nature. Savor fresh,
+          local flavors while enjoying stunning views that make every meal memorable.</p>
+        <button class="perfect-btn">Explore<img
+            src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdf5_arrow_right_alt_24dp_5F6368_FILL0_wght200_GRAD0_opsz24%202.svg"
+            loading="lazy" alt="Icon" class="arrow-right"></button>
+      </a>
+      <div class="img"></div>
+
+    </div>
+  </section>
+  <section>
+    <div class="pictures" style="margin-bottom: 100px;">
+      <h1>Follow us on Instagram</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe17_casey-lee-awj7sRviVXo-unsplash-p-500.webp"
+              alt="">
+          </a>
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1b_justin-roy-kxRPf1us4Xk-unsplash-p-800.webp"
+              alt="">
+          </a>
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1a_mat-kilkeary-9BjH8jl7Uj0-unsplash-p-500.webp"
+              alt="">
+          </a>
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1c_nunzio-guerrera-712Q1VaYXII-unsplash-p-800.webp"
+              alt="">
+          </a>
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe19_daniela-kokina-hOhlYhAiizc-unsplash-p-500.webp"
+              alt="">
+          </a>
+          <a class="swiper-slide" href="https://www.instagram.com/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe18_jay-castor-7AcMUSYRZpU-unsplash-p-800.webp"
+              alt="">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div class="stay-up">
+      <h1>Stay up to date</h1>
+      <p>Get regular updates about upcoming events, trip planning advice and <br>compelling stories.</p>
+      <div class="stay-inp">
+        <input type="text" placeholder="Your email">
+        <button>Subscribe</button>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="footer-list">
+        <ul>
+          <li>
+            <h1>What to do</h1>
+          </li>
+          <li>Sightseeing</li>
+          <li>Adventure & Outdoors</li>
+          <li>Wellness</li>
+        </ul>
+        <ul>
+          <li>
+            <h1>Where to stay</h1>
+          </li>
+          <li>Hotels</li>
+          <li>Campings</li>
+          <li>Cabins</li>
+        </ul>
+        <ul>
+          <li>
+            <h1>Where to eat</h1>
+          </li>
+          <li>Restaurants</li>
+          <li>Coffee shops</li>
+          <li>Bars</li>
+        </ul>
+        <ul>
+          <li>
+            <h1>Visitor info</h1>
+          </li>
+          <li>When to go</li>
+          <li>Getting here</li>
+          <li>Get in touch</li>
+        </ul>
+      </div>
+      <div class="footer-other">
+        <p>Sunny Lake template built by T.PINE. Powered by Webflow. <a href="https://sunnylake.webflow.io/privacy-policy" style="margin-left: 20px; text-decoration: none; color: #262626;">Privacy Policy</a> </p>
+        <div class="icons">
+          <a href="https://www.instagram.com/" target="_blank" class="footer-link w-inline-block">
+            <img
+              src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe00_Instagram.svg"
+              loading="lazy" alt="Icon" class="footer-icon" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="footer-link w-inline-block">
+            <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe02_Facebook.svg"
+              loading="lazy" alt="Icon" class="footer-icon" />
+          </a>
+          <a href="https://x.com/" target="_blank" class="footer-link w-inline-block">
+            <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdff_X.svg"
+              loading="lazy" alt="Icon" class="footer-icon" />
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" class="footer-link w-inline-block">
+            <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdf7_Tiktok.svg"
+              loading="lazy" alt="Icon" class="footer-icon" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" class="footer-link w-inline-block">
+            <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbdf6_Youtube.svg"
+              loading="lazy" alt="Icon" class="footer-icon" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-link">
+        <a href="">Instructions</a>
+        <a href="">Licence</a>
+        <a href="">Styleguide</a>
+        <a href="">Changelog</a>
+      </div>
+    </div>
+
+
+  </footer>
+  <script src="index.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      // 自动轮播
+      loop: true, // 开启循环
+      autoplay: {
+        delay: 0,  // 无停顿，立即下一帧
+        disableOnInteraction: false, // 用户交互后继续滚动
+      },
+      allowTouchMove: false,//禁止用户手动滑动（可选）
+      speed: 10000,// 滑动整个距离所用时间（越大越慢）
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 40,
+    });
+  </script>
+</body>
+
+</html>
+

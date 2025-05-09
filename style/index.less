@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: #f4f3f1;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  img {
+    margin-left: 3%;
+  }
+  .nav-right {
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    .nav-link {
+      display: flex;
+      justify-content: flex-end;
+      width: 50vw;
+      visibility: visible;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 22px;
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 10%;
+  height: 90vh;
+  background-color: #f4f3f1;
+  z-index: 20;
+  ul {
+    flex: 0 0 45%;
+    li {
+      margin: 20px 0;
+      font-size: 22px;
+      color: #262626;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+  }
+}
+/* 动画定义 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bgc-video {
+  .bgc {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+    .bgc-text {
+      margin-left: 3%;
+      font-size: 50px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 100px;
+      .btn {
+        width: 120px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid white;
+        color: white;
+        font-size: 20px;
+      }
+    }
+    p {
+      margin-right: 3%;
+      width: 40vw;
+      font-size: 24px;
+      margin-bottom: 100px;
+    }
+  }
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并覆盖整个区域 */
+    // filter: brightness(0.7); /* 0.5 = 50%亮度，变暗 */
+    z-index: -1;
+  }
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.6)
+    ); /* 渐变遮罩 */
+    z-index: 0;
+  }
+}
+
+.park-section {
+  margin-top: 10vh; /* 留出空间给固定的导航栏 */
+  height: 90vh; /* 盒子高度为 90vh */
+  .National-park {
+    width: 100%;
+    // height: 90vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .park-content {
+      flex: 1; /* 左侧文字占据较少空间 */
+      background-color: #f0f0f0;
+      margin-left: 3%;
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+        color: #262626;
+        margin-top: 50px;
+      }
+    }
+    .park-img {
+      flex: 2; /* 右侧图片占据更多空间 */
+      margin-right: 3%;
+      height: 80vh;
+      position: relative;
+      .parkImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        clip-path: inset(100% 0 0 0); /* 初始状态，完全被遮盖 */
+        transition: clip-path 0.1s ease-out; /* 平滑的遮盖动画 */
+      }
+
+      .img-1 {
+        clip-path: inset(0% 0 0% 0); /* 第一张默认完全显示 */
+      }
+
+      .img-2 {
+        clip-path: inset(100% 0 0 0); /* 默认不显示 */
+      }
+
+      .img-3 {
+        clip-path: inset(100% 0 0 0); /* 默认不显示 */
+      }
+    }
+  }
+}
+
+.plan-dream {
+  margin: 0 3% 200px;
+  h1 {
+    font-size: 50px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+    .plan-li {
+      color: white;
+      overflow: hidden;
+      position: relative;
+      flex: 1 1 calc(33.33% - 20px); /* 每个li占据1/3的宽度，减去间距 */
+      height: 80vh;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease; /* 添加过渡效果 */
+      position: relative;
+      &:hover::before {
+        // background-size: contain;
+        transform: scale(1.1);
+      }
+
+      .plan-content {
+        width: 100%;
+        position: absolute;
+        bottom: -60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          font-size: 40px;
+          text-align: center;
+          margin: 40px 0;
+        }
+        button {
+          margin: auto;
+          width: 120px;
+          height: 50px;
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+    .plan-li:hover .plan-content {
+      bottom: 20px;
+      transition: all 0.5s;
+    }
+    li::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1);
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      z-index: -2;
+    }
+    /* 暗层伪元素 */
+    li::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4),
+        transparent
+      ); /* 初始渐变 */
+      transition: background-color 0.5s ease;
+      z-index: -1;
+    }
+    li:nth-child(1)::before {
+      background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbded/66f2eb7004c16a3a0f5fbe72_johannes-andersson-UCd78vfC8vU-unsplash.webp);
+    }
+    li:nth-child(2)::before {
+      background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbded/66f2eb7004c16a3a0f5fbe8b_mushroom-sorting-office-r14a9t6DSy4-unsplash.webp);
+    }
+    li:nth-child(3)::before {
+      background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbded/66f2eb7004c16a3a0f5fbe91_toa-heftiba-a9pFSC8dTlo-unsplash.webp);
+    }
+  }
+}
+.perfect-stay {
+  margin: 0 3% 100px;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .img {
+    width: 58vw;
+    height: 90%;
+    background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe79_vincentiu-solomon-7MH4ped6_Mo-unsplash.webp);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease !important;
+    &:hover {
+      background-size: 102%;
+    }
+  }
+  .paragraph {
+    width: 30vw;
+    text-decoration: none;
+    color: #262626;
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      margin: 30px 0;
+      font-size: 18px;
+      color: #262626;
+    }
+    .perfect-btn {
+      width: 130px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: transparent;
+      transition: all 0.5s;
+      &:hover {
+        background-color: #2f5b3c;
+        color: white;
+      }
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
+.best {
+  .img {
+    background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe74_dan-gold-E6HjQaB7UEA-unsplash.webp);
+  }
+}
+.stay-up {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url(https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe75_humphrey-muleba-ed5mB7Zxi3E-unsplash-p-2000.webp);
+  background-size: cover;
+  background-position: 0 -180px;
+  h1 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  .stay-inp {
+    input {
+      width: 400px;
+      height: 50px;
+      background-color: rgba(206, 199, 199, 0.2);
+      border: none;
+      padding-left: 20px;
+      margin-right: 20px;
+      color: white;
+      font-size: 20px;
+    }
+    button {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}
+.footer {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 100px;
+  .footer-list {
+    margin: 0px 3%;
+    height: 200px;
+
+    display: flex;
+    gap: 20px;
+    ul {
+      flex: 1 1 calc(100% / 4 - 20px);
+      li {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #262626;
+      }
+    }
+  }
+  .footer-other {
+    margin: 0 3% 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icons {
+      width: 15%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+  .footer-link {
+    margin: 20px 3%;
+    a {
+      text-decoration: none;
+      color: #262626;
+      margin-right: 20px;
+    }
+  }
+}

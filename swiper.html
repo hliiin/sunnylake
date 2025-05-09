@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #marquee {
+      width: 100%;
+      overflow: hidden;
+      background: #cdcbcb;
+    }
+
+    #track {
+      display: flex;
+      width: max-content;
+      animation: scroll linear infinite;
+    }
+
+    .item {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .item:nth-child(n) {
+      width: 26vw;
+      height: 80%;
+
+    }
+    .item:nth-child(2n) {
+      width: 32vw;
+      height: 60%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+      /* 会动态设置 animation-duration */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="marquee">
+    <div  id="track">
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe17_casey-lee-awj7sRviVXo-unsplash-p-500.webp" alt="">
+      </div>
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1b_justin-roy-kxRPf1us4Xk-unsplash-p-800.webp" alt="">
+      </div>
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1a_mat-kilkeary-9BjH8jl7Uj0-unsplash-p-500.webp" alt="">
+      </div>
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe1c_nunzio-guerrera-712Q1VaYXII-unsplash-p-800.webp" alt="">
+      </div>
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe19_daniela-kokina-hOhlYhAiizc-unsplash-p-500.webp" alt="">
+      </div>
+      <div class="item">
+        <img src="https://cdn.prod.website-files.com/66f2eb7004c16a3a0f5fbdc0/66f2eb7004c16a3a0f5fbe18_jay-castor-7AcMUSYRZpU-unsplash-p-800.webp" alt="">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const marquee = document.getElementById('marquee');
+    const track = document.getElementById('track');
+
+    // 克隆内容直到长度足够实现无缝滚动
+    const originalChildren = [...track.children];
+    let currentWidth = track.scrollWidth;
+    const targetWidth = marquee.offsetWidth * 2;
+
+    while (currentWidth < targetWidth) {
+      originalChildren.forEach(child => {
+        const clone = child.cloneNode(true);
+        track.appendChild(clone);
+      });
+      currentWidth = track.scrollWidth;
+    }
+
+    // 设置动画时间，越长越慢，越平滑
+    const scrollSpeed = 100; // 数值越大速度越慢（像素/秒）
+    const duration = currentWidth / scrollSpeed;
+    track.style.animationDuration = `${duration}s`;
+  </script>
+
+</body>
+
+</html>
